@@ -1,0 +1,44 @@
+﻿Sdlc
+
+Software Development Life Cycle (SDLC)  is set of processes used by software industry to design, develop best quality softwares.SDLC is a process followed for a software project, within a software organization. It consists of a detailed plan describing how to develop, maintain, replace and alter or enhance specific software. The life cycle defines a methodology for improving the quality of software and the overall development process.
+SDLC consist of following phases :-
+    1. Planning
+    2. Requirement Analysis
+    3. Design
+    4. Development
+    5. Testing
+    6. Deployment
+    7. Maintenance
+
+Planning: -
+Planning for the quality assurance requirements and identification of the risks associated with the project is also done in the planning stage. The outcome of the technical feasibility study is to define the various technical approaches that can be followed to implement the project successfully with minimum risks.
+
+Requirement Analysis: -
+Requirement analysis is the most important and fundamental stage in SDLC. It is performed by the senior members of the team with inputs from the customer, the sales department, market surveys and domain experts in the industry. This information is then used to plan the basic project approach and to conduct product feasibility study in the economical, operational and technical areas.
+
+Design: -
+A design approach clearly defines all the architectural modules of the product along with its communication and data flow representation with the external and third party modules.
+
+Development: -
+In this stage of SDLC the actual development starts and the product is built. The programming code is generated as per DDS during this stage. If the design is performed in a detailed and organized manner, code generation can be accomplished without much hassle.
+
+Testing: -
+This stage is usually a subset of all the stages as in the modern SDLC models, the testing activities are mostly involved in all the stages of SDLC. However, this stage refers to the testing only stage of the product where product defects are reported, tracked, fixed and retested.
+Deployment: -
+Once the product is tested and ready to be deployed it is released formally in the appropriate market. Sometimes product deployment happens in stages as per the business strategy of that organization. 
+
+Maintenance: -
+This step is when end users can fine-tune the system, if they wish, to boost performance, add new capabilities or meet additional user requirements.
+
+
+Agile
+In agile development we produce small increments of software in a reasonably short frame. The entire process is run during a sprint & sprint results are deployed.
+
+Functional Testing
+Functional testing is to check whether the application feature such as major functionality, basic usability, and validation functioning properly compare to the expected result from the requirement
+
+Non-Functional Testing
+The test is focused on the system or software behavior rather than a specific function or action.Non-functional testing focus on system aspect that may not be related to a specific function such as security, scalability, usability and several other aspects.
+
+Root cause analysis 
+A root cause is defined as a factor that caused a nonconformance and should be permanently eliminated through process improvement. The root cause is the core issue—the highest-level cause—that sets in motion the entire cause-and-effect reaction that ultimately leads to the problem(s).
