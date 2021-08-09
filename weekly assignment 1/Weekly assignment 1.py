@@ -26,8 +26,7 @@ def display_names(users_folder):
 		# file = open(users_folder+file_name,'r')
 		with open(users_folder+file_name,'r') as file:
 			person_names_list.extend(file.readlines())
-			# for user in user_names_list:
-			# 	print(user.strip())
+			
 display_names(users_folder)
 person_names = [user.strip() for user in person_names_list]
 
@@ -55,10 +54,6 @@ def write_json(data, filename='output.json'):
 
 
 
-# with open('output.json') as json_file:
-# 	data = json.load(json_file)
-#
-# 	temp = data['emp_details']
 
 write_json(user_info)
 
@@ -69,8 +64,8 @@ with open("output.json") as f:
     json_string = f.read()
 try:
     parsed_json = json.loads(json_string)
-    formatted_json = json.dumps(parsed_json, indent = 4,sort_keys=True)
+    formatted_json = json.dumps(parsed_json, indent = 6,sort_keys=True)
     with open("output.json", "w") as f:
         f.write(formatted_json)
-except Exception as e:
-    print(repr(e))
+except Exception as dis:
+    print(repr(dis))
