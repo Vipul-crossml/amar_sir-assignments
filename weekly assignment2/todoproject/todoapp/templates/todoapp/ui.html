@@ -25,10 +25,10 @@
                 <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
                 <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
 
-                {% if task.complete == True %}
-                <p>{{task}}</p>
+                {% if task.complete == False %}
+                <p>{{task.name}} ---- {{task.status}}</p>
                 {% else %}
-                <span>{{task}}</span>
+                <span>{{task.name}} ---- {{task.status}}</span>
                 {% endif %}
             </div>
             {% endfor %}
