@@ -6,7 +6,10 @@ from .models import *
 from .forms import *
 from .models import Task
 # Create your views here.
-
+"""
+Index function is used to sent a post request,
+to the db and fetch every task object
+"""
 
 def index(request):
     tasks = Task.objects.all()
@@ -18,17 +21,17 @@ def index(request):
 
         title = request.POST.get('title')
         Task(name=title).save()
-        # form = TaskForm(request.POST)
-        # if form.is_valid():
-        #     form.save()
-
+      
 
         return redirect('/')
 
     else:
         context = {'tasks': tasks, 'form': form}
         return render(request, 'todoapp/ui.html', context)
-
+"""
+Update task is used to get items,
+ by primary key to change status.
+"""
     
 
 
@@ -46,6 +49,11 @@ def updateTask(request, pk):
     context = {'form': form}
 
     return render(request, 'todoapp/update_task.html', context)
+
+"""
+DeleteTask will get item by primary key,
+and delete instance of that object from DB.
+"""
 
 
 def deleteTask(request, pk):
