@@ -48,6 +48,7 @@ for person_name in person_names:
 # print(json.dumps(user_info))
 
 
+
 def write_json(data, filename='output.json'):
 	with open(filename, 'w') as f:
 		json.dump(data, f, indent=2)
