@@ -5,7 +5,6 @@ import getpass
 import uuid
 import json
 							# make a class that perform all basic operation like generate id and email and display usernames and for store the data in json file you can greate seprate function
-
 							# you can make a one function to display time and username
 
 # current datetime
