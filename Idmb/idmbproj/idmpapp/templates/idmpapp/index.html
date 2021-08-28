@@ -21,6 +21,23 @@
             <td colspan="2"><input type="submit" class="btn  btn-lg btn-warning fs-5"  value="submit"  style="background: black;color: white;border: none;" type="submit"   /></td>
         </tr>
     </table>
+    </form>
+        <form action="http://127.0.0.1:8000/within/" method="POST">
+      {% csrf_token %}
+      <div>
+        <label for="start">From </label>
+          <input type="date" id="start" name="startdate">
+          <label for="end">To </label>
+          <input type="date" id="end" name="enddate">
+          <input type="submit" name="submit" value="date_sort">
+      </div>
+    </form >
+    <form action="http://127.0.0.1:8000/topten/" method="">
+      <input type="submit" name="submit" value="Top Ten">
+    </form>
+    <form action="http://127.0.0.1:8000/leastten/" method="">
+      <input type="submit" name="submit" value="Last Ten">
+    </form>
   <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

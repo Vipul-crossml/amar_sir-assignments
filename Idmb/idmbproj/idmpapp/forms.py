@@ -23,7 +23,7 @@ class MovieForm(ModelForm):
 
 class ArtistForm(ModelForm):
     """
-    
+
     """
     class Meta:
         model = Artist
@@ -35,7 +35,7 @@ class ArtistForm(ModelForm):
 
 class AwardForm(ModelForm):
     """
-    
+
     """
     class Meta:
         model = Award
@@ -47,9 +47,18 @@ class AwardForm(ModelForm):
 
 class RatingForm(ModelForm):
     """
-    
+
     """
     class Meta:
         model = Rating
         exclude = ['votes', ]
         fields = '__all__'
+
+
+class SearchForm(ModelForm):
+    """
+
+    """
+    class Meta:
+        model = Movie
+        fields = ['name']

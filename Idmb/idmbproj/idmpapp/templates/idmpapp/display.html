@@ -1,0 +1,25 @@
+
+{% block content %}
+
+{{context.count}}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Genure</th>
+            <th>Release Date</th>
+            <th>Language</th>
+            <th>Duration</th>
+            <th>Average Rating</th>
+        </tr>
+            {% for movie in context %}
+            <tr>
+                <td>{{movie.name}}</td>
+                <td>{{movie.genre}}</td>
+                <td>{{movie.Release_date.date}}</td>
+                <td>{{movie.Language}}</td>
+                <td>{{movie.Length}}</td>
+                <td>{{movie.avg_rating}}</td>
+            </tr>
+            {% endfor %}    
+    </table>
+{% endblock content %}

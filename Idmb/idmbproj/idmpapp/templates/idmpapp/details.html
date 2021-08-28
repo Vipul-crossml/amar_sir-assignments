@@ -1,0 +1,18 @@
+{% block content %}
+<form method="POST"  style="margin: 0">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value='Search'/>
+ </form>
+ {% for que in queryset %}
+ <div>
+ <span>{{ que.name }}</span>
+<span>{{ que.Release_date }}</span>
+<span>{{ que.genre }}</span>
+{% for artist in que.artists.all  %}
+    {{artist.name}}
+{% endfor %}
+
+ </div>
+ {% endfor %}
+{% endblock content %}

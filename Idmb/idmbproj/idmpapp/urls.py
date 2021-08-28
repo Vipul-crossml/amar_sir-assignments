@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-
+apps_name = 'idmpapp'
 urlpatterns = [
     path('', views.index, name='index'),
     # 
@@ -12,9 +12,13 @@ urlpatterns = [
     path('award', views.award, name='award'),
     # 
     
-    path('rating', views.rating, name='rating'),
+    path('rating/', views.rating, name='rating'),
     # 
 
     path('avg1', views.avg1, name='avg1'),
     # 
+    path('topten/', views.topten, name ='topten'),
+    path('leastten/', views.leastten, name ='leastten'),
+    path('within/', views.within, name ='within'),
+    path('search', views.search_results, name='search_results'),
 ]
