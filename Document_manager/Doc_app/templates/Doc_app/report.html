@@ -1,0 +1,100 @@
+
+{% extends 'Doc_app/base.html' %}
+
+
+{% block body %}
+
+{% if user.is_authenticated %}
+<div>
+	<form>
+		<label for="description">Search By name </label>
+		<input type="text" id="doc_name" placeholder="Search By Description" name="description">
+		<button  class="btn btn-primary" type="submit">Search</button>
+	</form>
+	<br><br>
+	<form>
+		<label for="month">Search by Month</label>
+		{% comment %} <div class="dropdown">
+    
+       <div class="dropdown-content">
+      <a href="01">January</a>
+    <a href="02">Febuary</a>
+    <a href="03">March</a>
+	   <a href="04">April</a>
+    <a href="05">May</a>
+    <a href="06">June</a>
+	   <a href="07">July</a>
+    <a href="08">August</a>
+    <a href="09">September</a>
+	   <a href="10">October</a>
+    <a href="11">November</a>
+    <a href="12">December</a>
+  </div>
+</div> {% endcomment %}
+		<input type="text" id="month" placeholder="Search By Month" name="month">
+		<button  class="btn btn-primary" type="submit">Search</button>
+	</form>
+	<br><br>
+	<form>
+		<label for="year">Year</label>
+		<input type="text" id="year" placeholder="Search By Year" name="year">
+		<button  class="btn btn-primary" type="submit">Search</button>
+	</form>
+	<br><br>
+	<form>
+		<label for="from_date">From</label>
+		<input type="date" id="from_date" placeholder="from" name="from">
+		<label for="to_date">To</label>
+		<input type="date" id="to_date" placeholder="to" name="to">
+		<button  class="btn btn-primary" type="submit">Search</button>
+	</form>
+</div>
+{% if pdf_list %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">Date Of Upload</th>
+      <th scope="col">Download</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for pdf in pdf_list %}
+    <tr>
+      	<th scope="row"> {{forloop.counter}}</th>
+	    <td>{{pdf.description}}</td>
+	    <td>{{pdf.uploaded_at}}</td>
+	    <td><a href="{{ pdf.document.url }}" class="btn btn-primary" target="_blank">Download</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+
+Upload summry for the documents
+
+<table class="table">
+	<thead>
+	<tr>
+	    <th scope="col">Daily Uploads</th>
+	    <th scope="col">Monthly Uploads</th>
+	    <th scope="col">Yearly Uploads</th>
+
+	</tr>
+	</thead>
+	<tbody>
+		<td>{{daily_count}} File{{daily_count|pluralize}}</td>
+		<td>{{monthly_count}} File{{monthly_count|pluralize}}</td>
+		<td>{{yearly_count}} File{{yearly_count|pluralize}}</td>
+	 </tbody>
+</table>
+
+	<a class="btn btn-primary" href="{% url 'index' %}" role="button">Home Page</a>
+	<a class="btn btn-primary" href="{% url 'save' %}" role="button">Upload Document</a>
+
+{% else %}
+	<h4> Please login <a href="{% url 'login' %}"> Here </a> to get started
+{% endif %}
+{% endblock %}
